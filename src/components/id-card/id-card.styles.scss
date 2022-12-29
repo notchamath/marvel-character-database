@@ -1,7 +1,58 @@
+@import '../../config';
+
 .IdCard-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 
-    min-width: 10%;
+    border: $grey-mid 1px solid;
+    border-radius: .5rem;
+    background-color: $grey-light;
+
+    height: 300px;
+
+    img{
+        border-radius: 50%;
+        height: 7rem;
+        width: 7rem;
+    }
+
+    div{
+        color: $blue-dark;
+    }
+
+    span{
+        align-self: flex-start;
+        font-weight: 700;
+        color: $blue-mid;
+    }
+
+    .IdCard__name{
+        color: $blue-light;
+        font-size: 1.5rem;
+        margin: .5em 0;
+    }
+
+    &::before{
+        content: '';
+        height: 34%;
+        width: 100%;
+        background-color: $blue-mid;
+        border-radius: .5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:hover{
+        transform: translate(-2px, -2px);
+        box-shadow: 0 2px 0 0 $blue-light;
+        transition: all .2s ease-in-out;
+    }
 }
