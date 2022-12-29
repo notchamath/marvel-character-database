@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 
+import { Searchbar } from "../../components/searchbar/searchbar.component";
+
 import './navigation.styles.scss';
 
 export const Navigation = () => {
@@ -10,10 +12,7 @@ export const Navigation = () => {
                     <h1>A</h1>
                 </div>
 
-                <div className="search">
-                    <input type="text" />
-                    <button type="submit">Search</button>
-                </div>
+                <Searchbar/>
 
                 <a href="#">Login</a>
 

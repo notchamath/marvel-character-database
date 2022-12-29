@@ -9,7 +9,7 @@ export const Home = () => {
 
     useEffect(() => async () => {
         try{
-            const url = 'https://randomuser.me/api/?results=10';
+            const url = 'https://randomuser.me/api/?results=50';
             const res = await fetch(url);
             const data = await res.json();
             setPersons(data.results);
