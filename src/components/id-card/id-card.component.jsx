@@ -1,23 +1,20 @@
 import './id-card.styles.scss';
 
 export const IdCard = ({element}) => {
-    console.log(element);
 
     return(
         <div className="IdCard-container">
-            <img src={element.picture.large} alt={element.name.last} />
+            <img src={`${element.thumbnail.path}.${element.thumbnail.extension}`} alt={element.name} />
             <div className="IdCard__name">
-                {element.name.title} {element.name.first} {element.name.last}
+                {element.name}
             </div>
             <div className="IdCard__age">
-                <span>Age: </span>{element.dob.age}
+                {element.id}
             </div>
-            <div className="IdCard__location">
-                <span>Lives in: </span>{element.location.city}, {element.location.country}
+            <div className="IdCard__age">
+                {element.description}
             </div>
-            <div className="IdCard__email">
-                <span>Email: </span>{element.email}
-            </div>
+            
         </div>
     )
 }
