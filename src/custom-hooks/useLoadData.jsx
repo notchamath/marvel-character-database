@@ -5,15 +5,20 @@ import {SearchResultsContext} from '../contexts/search-results.context';
 
 const useLoadData = (query) => {
 
-    const {setSearchResults, setIsLoading} = useContext(SearchResultsContext);
+    const {setSearchResults, setIsLoading, offset, setOffset, setHasMore} = useContext(SearchResultsContext);
 
+    useEffect(() => {
+        setSearchResults([]);
+        setOffset(0);
+    }, [query])
+    
     useEffect(() => {
         
         setIsLoading(true);
-        setSearchResults([]);
-
+        const fetchController = new AbortController();
+        const {signal} = fetchController;
+        
         const loadData = async (query) => {
-            const offset = 0;
             const requestLimit = 100;
             let url = null;
             
@@ -24,22 +29,35 @@ const useLoadData = (query) => {
             }
             
             try{
-                const res = await fetch(url);
+                const res = await fetch(url, {signal});
                 const response = await res.json();
-                const data = response.data.results;
+                const data = response.data;
 
+                if (offset + data.count >= data.total){
+                    setHasMore(false);
+                } else {
+                    setHasMore(true)
+                }
                 setIsLoading(false);
-                
-                return data;
+
+                return data.results;
             
             } catch(err) {
                 console.log('There was an error fetching data:::', err);
             }
         }
     
-        loadData(query).then(data => setSearchResults(data));
-        
-    }, [query]);
+        loadData(query).then(data => setSearchResults(prevData => {
+            console.log('RUNNING.....')
+
+            if (prevData === undefined || prevData === null || data === undefined || data === null) return [];
+            
+            return([...prevData, ...data]);
+        }));
+
+        return () => {fetchController.abort()}
+
+    }, [query, offset]);
     
 }
 

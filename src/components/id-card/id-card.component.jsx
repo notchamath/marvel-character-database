@@ -1,6 +1,8 @@
+import {forwardRef} from 'react';
+
 import './id-card.styles.scss';
 
-export const IdCard = ({element}) => {
+export const IdCard = forwardRef(({element}, ref) => {
 
     return(
         <div className="IdCard-container">
@@ -8,9 +10,9 @@ export const IdCard = ({element}) => {
             <div className="IdCard__name">
                 {element.name}
             </div>
-            <div className="IdCard__age">
+            <div ref={ref} className="IdCard__id">
                 {element.id}
             </div>            
         </div>
     )
-}
+})
