@@ -27,6 +27,8 @@ const useLoadData = (query) => {
                 const res = await fetch(url);
                 const response = await res.json();
                 const data = response.data.results;
+
+                setIsLoading(false);
                 
                 return data;
             
@@ -37,8 +39,6 @@ const useLoadData = (query) => {
     
         loadData(query).then(data => setSearchResults(data));
         
-        setIsLoading(false);
-
     }, [query]);
     
 }
