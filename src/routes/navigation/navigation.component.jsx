@@ -18,6 +18,8 @@ export const Navigation = () => {
                 <a href="#">Login</a>
 
             </nav>
+
+            <aside>Data provided by Marvel. © 2014 Marvel</aside>
             <Outlet></Outlet>
         </>
     )

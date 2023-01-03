@@ -48,8 +48,6 @@ const useLoadData = (query) => {
         }
     
         loadData(query).then(data => setSearchResults(prevData => {
-            console.log('RUNNING.....')
-
             if (prevData === undefined || prevData === null || data === undefined || data === null) return [];
             
             return([...prevData, ...data]);

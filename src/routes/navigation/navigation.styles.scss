@@ -1,3 +1,5 @@
+@import '../../config';
+
 nav{
     position: sticky;
     display: flex;
@@ -7,4 +9,15 @@ nav{
     z-index: 10;
 
     background-color: #d3dbe7;
+}
+
+aside{
+    position: fixed;
+    padding: .5rem 2rem;
+    top: 50vh;
+    left: -140px;
+    transform: rotate(-90deg);
+    border-radius: 8px;
+    color: $grey-light;
+    background-color: $blue-dark;
 }
