@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 
 import useLoadData from '../../custom-hooks/useLoadData';
@@ -8,10 +9,12 @@ import './searchbar.styles.scss';
 export const Searchbar = () => {
 
     const [query, setQuery] = useState('');
+    const navigate = useNavigate();
 
     const handleSearch = (event) => {
         event.preventDefault();
-        setQuery(event.target[0].value)
+        setQuery(event.target[0].value);
+        navigate(`/`);
     }
 
     useLoadData(query);

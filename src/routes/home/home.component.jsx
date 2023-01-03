@@ -7,7 +7,7 @@ import { Spinner } from '../../components/spinner/spinner.component';
 
 import './home.styles.scss';
 
-export const Home = () => {
+const Home = () => {
     
     const {searchResults, isLoading, setOffset, hasMore} = useContext(SearchResultsContext);
     const observer = useRef();
@@ -43,3 +43,5 @@ export const Home = () => {
     
     )
 }
+
+export default Home;
