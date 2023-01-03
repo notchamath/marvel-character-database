@@ -1,16 +1,15 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import { BsSearch } from 'react-icons/bs';
 
-import useSearchDb from '../../custom-hooks/useSearchDb';
+import {SearchResultsContext} from '../../contexts/search-results.context';
 
 import './searchbar.styles.scss';
 
 export const Searchbar = () => {
 
-    const requestLimit = 10;
-    const [value, setValue] = useState('');
+    const requestLimit = 100;
+    const {setSearchResults} = useContext(SearchResultsContext);
     
-
     const loadData = async (query) => {
 
         try{
@@ -32,11 +31,9 @@ export const Searchbar = () => {
 
     const handleSearch = (event) => {
         event.preventDefault();
-        loadData(event.target[0].value).then(data => setValue(data));
+        loadData(event.target[0].value).then(data => setSearchResults(data));
     }
-
-    console.log(value);
-   
+    
     return(
         <div className="search">
             <form onSubmit={handleSearch}>
