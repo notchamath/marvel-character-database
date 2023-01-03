@@ -1,20 +1,20 @@
-import {useContext} from 'react';
+import {useState} from 'react';
 import { BsSearch } from 'react-icons/bs';
 
-import {SearchResultsContext} from '../../contexts/search-results.context';
-
-import { loadData } from '../../custom-functions/loadData';
+import useLoadData from '../../custom-hooks/useLoadData';
 
 import './searchbar.styles.scss';
 
 export const Searchbar = () => {
 
-    const {setSearchResults} = useContext(SearchResultsContext);
+    const [query, setQuery] = useState('');
 
     const handleSearch = (event) => {
         event.preventDefault();
-        loadData(event.target[0].value).then(data => setSearchResults(data));
+        setQuery(event.target[0].value)
     }
+
+    useLoadData(query);
     
     return(
         <div className="search">
