@@ -10,11 +10,7 @@ export const IdCard = ({element}) => {
             </div>
             <div className="IdCard__age">
                 {element.id}
-            </div>
-            <div className="IdCard__age">
-                {element.description}
-            </div>
-            
+            </div>            
         </div>
     )
 }

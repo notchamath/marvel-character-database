@@ -11,7 +11,7 @@ export const Home = () => {
     return (
  
         <div className="home__container">
-            {searchResults === null ? <div>None</div> :
+            {searchResults === null ? <div>Loading...</div> :
                 searchResults.map(element => <IdCard element={element} key={element.id}/>)
             }
         </div>

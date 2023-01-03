@@ -5,6 +5,7 @@ import { Searchbar } from "../../components/searchbar/searchbar.component";
 import './navigation.styles.scss';
 
 export const Navigation = () => {
+
     return (
         <>
             <nav>
