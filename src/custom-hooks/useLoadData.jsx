@@ -24,15 +24,16 @@ const useLoadData = (query) => {
             }
             
             try{
-            const res = await fetch(url);
-            const response = await res.json();
-            const data = response.data.results;
+                const res = await fetch(url);
+                const response = await res.json();
+                const data = response.data.results;
+                
+                return data;
             
-            return data;
-            
-        } catch(err) {
-            console.log('There was an error fetching data:::', err);
-        }}
+            } catch(err) {
+                console.log('There was an error fetching data:::', err);
+            }
+        }
     
         loadData(query).then(data => setSearchResults(data));
         
