@@ -1,0 +1,79 @@
+@import '../../config';
+
+.tabs__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    margin-top: 1rem;
+    background: $primary-color;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+
+    .tabs__block-tabs {
+        display: flex;
+    
+        .tabs__tab {
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: .6rem;
+            text-align: center;
+            width: 30%;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+            box-sizing: content-box;
+            position: relative;
+        }
+        
+        .tabs__tab:not(:last-child){
+            border-right: 1px solid rgba(0, 0, 0, 0.274);
+        }
+          
+        .active-tab  {
+            border-bottom: 1px solid transparent;
+        }
+
+        .active-tab::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% + 2px);
+            height: 5px;
+            background: $accent-color;
+        }
+    }
+    
+    .tabs__content-tabs{
+        width: 300px;
+
+        .tabs__content {
+            box-sizing: border-box;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            display: none;
+
+            .tabs__element{
+                margin: 1rem;
+            }
+
+            .tabs__total{
+                margin-top: 2rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+        
+        .active-content {
+            display: block;
+        }                                               
+    }
+      
+    
+      
+}
+  
+  

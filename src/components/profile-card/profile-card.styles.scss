@@ -1,0 +1,50 @@
+@import '../../config';
+
+.profile-card__container{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .profile-card__name{
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: $accent-color;
+    }
+
+    img{
+        width: 50%;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .profile-desc{
+        width: 60%;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        text-align: center;
+        color: $primary-color;
+        background: $grey-dark-gradient;
+        font-style: italic;
+    }
+
+    a{
+        margin: 2rem;
+        color: $accent-color;
+        text-decoration: none;
+        border: 3px solid $accent-color;
+        padding: .4rem .6rem;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            color: $primary-color;
+            background-color: $accent-color;
+        }
+    }
+}
