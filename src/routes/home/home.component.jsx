@@ -38,9 +38,9 @@ const Home = () => {
                 }
             })}
 
-            {searchResults.length < 1 && <h1>No Items Found... Try different variations of the name</h1>} 
+            {!isLoading && searchResults.length < 1 && <h1>No Items Found... Try different variations of the name</h1>} 
 
-            {isLoading && <Spinner/>} 
+            {isLoading && <Spinner/>}
         </div>
     
     )

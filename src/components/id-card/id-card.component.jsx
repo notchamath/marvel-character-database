@@ -17,14 +17,13 @@ export const IdCard = forwardRef(({element}, ref) => {
     } 
 
     return(
-        <div className="IdCard-container" onClick={onNavigateHandler}>
+        <div className="IdCard-container" ref={ref} onClick={onNavigateHandler}>
+        
             <img src={url} alt={element.name} />
+            
             <div className="IdCard__name">
                 {element.name}
-            </div>
-            <div ref={ref} className="IdCard__id">
-                {element.id}
-            </div>            
+            </div>       
         </div>
     )
 })

@@ -9,9 +9,9 @@ const ProfileCard = ({profileInfo}) => {
             <div>{profileInfo.modified}</div>
             <img src={url} alt={profileInfo.name} />
             <div>{profileInfo.description}</div>
-            <div>{profileInfo.comics.items[0].name}</div>
+            {/* <div>{profileInfo.comics.items[0].name}</div>
             <div>{profileInfo.series.items[0].name}</div>
-            <div>{profileInfo.stories.items[0].name}</div>
+            <div>{profileInfo.stories.items[0].name}</div> */}
             <a href={profileInfo.urls[0].url}>More Info</a>
         </div>
     )
