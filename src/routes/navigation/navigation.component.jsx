@@ -1,6 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 import { Searchbar } from "../../components/searchbar/searchbar.component";
+import Logo from "../../components/logo/logo.component"; 
 
 import './navigation.styles.scss';
 
@@ -9,13 +10,13 @@ export const Navigation = () => {
     return (
         <>
             <nav className="navigation__nav">
-                <div className="logo-container">
-                    <h1>A</h1>
-                </div>
+                <Link to='/' className="logo-container">
+                    <Logo/>
+                </Link>
 
                 <Searchbar/>
 
-                <a href="#">Login</a>
+                <Link to='/auth' className="sign-up-btn">Sign Up</Link>
 
             </nav>
 

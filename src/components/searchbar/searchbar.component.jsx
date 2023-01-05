@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import { BsSearch } from 'react-icons/bs';
 
 import useLoadData from '../../custom-hooks/useLoadData';
 
@@ -22,8 +21,8 @@ export const Searchbar = () => {
     return(
         <div className="search">
             <form onSubmit={handleSearch}>
-                <input label='search' type="text" placeholder='Search'/>
-                <button type='submit'><BsSearch/></button>
+                <input label='search' type="text" placeholder='Search by name'/>
+                <button type='submit'>Search</button>
             </form>
         </div>
     )

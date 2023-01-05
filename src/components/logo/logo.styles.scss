@@ -1,0 +1,26 @@
+@import '../../config';
+
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+
+    .first{
+        position: absolute;
+        color: $accent-color;
+        top: -30px;
+        left: 0;
+    }
+    .second{
+        position: absolute;
+        color: $primary-color;
+        top: -20px;
+        left: 15px;
+    }
+    .third{
+        position: absolute;
+        color: $gold;
+        top: -10px;
+        left: 25px;
+    }
+}
