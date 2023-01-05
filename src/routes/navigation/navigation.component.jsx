@@ -8,7 +8,7 @@ export const Navigation = () => {
 
     return (
         <>
-            <nav>
+            <nav className="navigation__nav">
                 <div className="logo-container">
                     <h1>A</h1>
                 </div>
@@ -19,7 +19,7 @@ export const Navigation = () => {
 
             </nav>
 
-            <aside>Data provided by Marvel. © 2014 Marvel</aside>
+            <aside className="navigation__aside">Data provided by Marvel. © 2014 Marvel</aside>
             <Outlet></Outlet>
         </>
     )
