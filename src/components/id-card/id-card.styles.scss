@@ -9,9 +9,9 @@
     z-index: 2;
     cursor: pointer;
 
-    border: $grey-mid 1px solid;
+    border: $accent-color 1px solid;
     border-radius: .5rem;
-    background-color: $grey-light;
+    background-color: $primary-color;
 
     height: 300px;
 
@@ -22,17 +22,17 @@
     }
 
     div{
-        color: $blue-dark;
+        color: $accent-color;
     }
 
     span{
         align-self: flex-start;
         font-weight: 700;
-        color: $blue-mid;
+        color: $gold;
     }
 
     .IdCard__name{
-        color: $blue-light;
+        color: $primary-accent-gradient;
         font-size: 1.5rem;
         margin: .5em 0;
     }
@@ -41,7 +41,7 @@
         content: '';
         height: 34%;
         width: 100%;
-        background-color: $blue-mid;
+        background-color: $gold;
         border-radius: .5rem;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -53,7 +53,7 @@
 
     &:hover{
         transform: translate(-2px, -2px);
-        box-shadow: 0 2px 0 0 $blue-light;
+        box-shadow: 0 2px 0 0 $primary-accent-gradient;
         transition: all .2s ease-in-out;
     }
 }

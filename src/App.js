@@ -5,8 +5,6 @@ import Home from './routes/home/home.component';
 import Profile  from './routes/profile/profile.component';
 import NotFoundPage from './routes/not-found-page/not-found-page.compenent';
 
-import './App.css';
-
 function App() {
   return (
     <Routes>

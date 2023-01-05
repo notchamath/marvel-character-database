@@ -8,7 +8,7 @@
     top: 0;
     z-index: 10;
 
-    background-color: #d3dbe7;
+    background: $grey-dark-gradient;
 }
 
 .navigation__aside{
@@ -18,6 +18,6 @@
     left: -140px;
     transform: rotate(-90deg);
     border-radius: 8px;
-    color: $grey-light;
-    background-color: $blue-dark;
+    color: $accent-color;
+    background: $grey-dark-gradient;
 }

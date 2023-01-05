@@ -30,7 +30,7 @@ const Home = () => {
  
         <div className="home__container">
 
-            {searchResults !== [] && searchResults.map((element, idx) => {
+            {searchResults.length > 0 && searchResults.map((element, idx) => {
                 if(searchResults.length === idx + 1){
                     return <IdCard ref={lastElementRef} element={element} key={element.id}/>
                 } else {
