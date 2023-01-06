@@ -38,7 +38,7 @@ const Home = () => {
                 }
             })}
 
-            {!isLoading && searchResults.length < 1 && <h1>No Items Found... Try different variations of the name</h1>} 
+            {!isLoading && searchResults.length < 1 && <h1 className="home__no-items-found">No Items Found... Try different variations of the name</h1>} 
 
             {isLoading && <Spinner/>}
         </div>

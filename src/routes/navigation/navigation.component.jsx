@@ -16,7 +16,7 @@ export const Navigation = () => {
 
                 <Searchbar/>
 
-                <Link to='/auth' className="sign-up-btn">Sign Up</Link>
+                <Link to='/auth' className="sign-up-btn">Sign In</Link>
 
             </nav>
 

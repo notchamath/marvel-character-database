@@ -1,13 +1,12 @@
 import Tabs from '../tabs/tabs.component';
 
+import useGetImage from '../../custom-hooks/useGetImage';
+
 import './profile-card.styles.scss';
 
 const ProfileCard = ({profileInfo}) => {
 
-    let url = `${profileInfo.thumbnail.path}.${profileInfo.thumbnail.extension}`;
-
-    console.log(profileInfo)
-
+    let url = useGetImage(profileInfo.thumbnail.path, profileInfo.thumbnail.extension);
 
     return (
         <div className="profile-card__container">

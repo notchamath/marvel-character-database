@@ -19,8 +19,8 @@ export default function Tabs({comics, series, stories}) {
             <div className="tabs__content-tabs">
                 
                 <div className={toggleState === 1 ? 'tabs__content active-content' : 'tabs__content'}>
-                    {comics.available > 0 && comics.items.map(comic => {
-                        return <div className='tabs__element' key={comic.name}>{comic.name}</div>
+                    {comics.available > 0 && comics.items.map((comic, index) => {
+                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
                     })}
 
                     <div className="tabs__total">
@@ -29,8 +29,8 @@ export default function Tabs({comics, series, stories}) {
                 </div>
 
                 <div className={toggleState === 2 ? 'tabs__content active-content' : 'tabs__content'}>
-                    {series.available > 0 && series.items.map(comic => {
-                        return <div className='tabs__element' key={comic.name}>{comic.name}</div>
+                    {series.available > 0 && series.items.map((series, index) => {
+                        return <div className='tabs__element' key={index + series.name}>{series.name}</div>
                     })}
 
                     <div className="tabs__total">
@@ -39,8 +39,8 @@ export default function Tabs({comics, series, stories}) {
                 </div>
 
                 <div className={toggleState === 3 ? 'tabs__content active-content' : 'tabs__content'}>
-                    {stories.available > 0 && stories.items.map(comic => {
-                        return <div className='tabs__element' key={comic.name}>{comic.name}</div>
+                    {stories.available > 0 && stories.items.map((story, index) => {
+                        return <div className='tabs__element' key={index + story.name}>{story.name}</div>
                     })}
 
                     <div className="tabs__total">

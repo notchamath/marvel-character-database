@@ -5,4 +5,9 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 1rem;
+
+    .home__no-items-found{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
