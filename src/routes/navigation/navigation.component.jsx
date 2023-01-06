@@ -1,11 +1,21 @@
+import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
+import {UserContext} from '../../contexts/user.context';
 import { Searchbar } from "../../components/searchbar/searchbar.component";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 import Logo from "../../components/logo/logo.component"; 
 
 import './navigation.styles.scss';
 
 export const Navigation = () => {
+
+    const {currentUser, setCurrentUser} = useContext(UserContext);
+
+    const signOutHandler = async () => {
+        await signOutUser();
+        setCurrentUser(null);
+    }
 
     return (
         <>
@@ -16,7 +26,11 @@ export const Navigation = () => {
 
                 <Searchbar/>
 
-                <Link to='/auth' className="sign-up-btn">Sign In</Link>
+                {
+                    currentUser?
+                    <div className="sign-up-btn" onClick={signOutHandler}>Sign Out</div> :
+                    <Link to='/auth' className="sign-up-btn">Sign In</Link> 
+                }
 
             </nav>
 
