@@ -1,36 +1,40 @@
 @import '../../config';
 
 .IdCard-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     position: relative;
     cursor: pointer;
     background: transparent;
     margin-top: 2.5rem;
     border-radius: .5rem;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    height: 280px;
+    
+    .IdCard-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
 
-    img{
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        border-radius: .5rem;
+        img{
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            border-radius: .5rem;
+        }
+        
+        .IdCard__name{
+            position: absolute;
+            bottom: 0;
+            transform: translateY(50%);
+            padding: 1rem;
+            text-align: center;
+            color: $primary-color;
+            background: $grey-dark-gradient;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }    
     }
-    
-    .IdCard__name{
-        position: absolute;
-        bottom: 0;
-        transform: translateY(50%);
-        padding: 1rem;
-        text-align: center;
-        color: $primary-color;
-        background: $grey-dark-gradient;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    
+
     &:hover{
         transform: translate(-2px, -2px);
         transition: all .2s ease-in-out;
