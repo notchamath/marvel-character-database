@@ -10,7 +10,8 @@ import './navigation.styles.scss';
 
 export const Navigation = () => {
 
-    const {currentUser} = useContext(UserContext);
+    const {currentUser, team} = useContext(UserContext);
+    console.log(team)
 
     return (
         <>
