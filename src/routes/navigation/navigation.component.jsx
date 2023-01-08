@@ -21,11 +21,17 @@ export const Navigation = () => {
 
                 <Searchbar/>
 
-                {
-                    currentUser?
-                    <div className="sign-up-btn" onClick={signOutUser}>Sign Out</div> :
-                    <Link to='/auth' className="sign-up-btn">Sign In</Link> 
-                }
+                    {
+                        currentUser?
+                        <div className="navigation__buttons">
+                            <Link to='/my-team' className="navigation__btn">My Team</Link>
+                            <div className="navigation__btn" onClick={signOutUser}>Sign Out</div>
+                        </div>
+                         :
+                        <div className="navigation__buttons">
+                            <Link to='/auth' className="navigation__btn">Sign In</Link> 
+                        </div>
+                    }
 
             </nav>
 

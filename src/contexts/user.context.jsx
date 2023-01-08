@@ -29,7 +29,7 @@ export const UserProvider = ({children}) => {
         
         return unsubscribe;
     }, []);
-
+    
     useEffect(()=>{
         if(currentUser) {
             setTeamOnDb(currentUser, team);

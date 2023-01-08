@@ -17,21 +17,28 @@
         cursor: pointer;
     }
 
-    .sign-up-btn{
-        color: $primary-color;
-        text-decoration: none;
-        border: 3px solid $primary-color;
-        padding: .4rem .6rem;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all .2s ease-in-out;
+    .navigation__buttons{
+        display: flex;
 
-        &:hover{
-            color: black;
-            background-color: $primary-color;
+        .navigation__btn{
+            margin: 0 1rem;
+            color: $primary-color;
+            text-decoration: none;
+            border: 3px solid $primary-color;
+            padding: .4rem .6rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+    
+            &:hover{
+                color: black;
+                background-color: $primary-color;
+            }
+
         }
     }
+
 }
 
 .navigation__aside{

@@ -25,7 +25,12 @@ export const IdCard = forwardRef(({element}, ref) => {
                 </div>
             </div>
 
-            <IdBtn id={element.id}/>
+            <IdBtn element={{
+                'id': element.id,
+                'name': element.name,
+                'thumbnail': element.thumbnail
+                }}
+            />
         </div>
     )
 })
