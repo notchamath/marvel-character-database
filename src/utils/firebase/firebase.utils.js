@@ -18,16 +18,16 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDfHpx1Abp56mAUXslGkG6YeE1pNN97RbA",
-    authDomain: "marvel-character-db.firebaseapp.com",
-    projectId: "marvel-character-db",
-    storageBucket: "marvel-character-db.appspot.com",
-    messagingSenderId: "148200586830",
-    appId: "1:148200586830:web:ad8ac6799d6dd42a088d1f"
-};
-
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+    apiKey: "AIzaSyB_cf6P-GiaK95vCxJEq1Zh_CBGsln6KpE",
+    authDomain: "marvel-character-db-5df19.firebaseapp.com",
+    projectId: "marvel-character-db-5df19",
+    storageBucket: "marvel-character-db-5df19.appspot.com",
+    messagingSenderId: "129683183916",
+    appId: "1:129683183916:web:77a836cc46340074907489"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
 const providerGoogle = new GoogleAuthProvider();
 providerGoogle.setCustomParameters({

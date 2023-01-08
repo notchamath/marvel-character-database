@@ -1,6 +1,6 @@
 import {createContext, useState, useEffect} from 'react';
 
-import { onAuthStateChangedListener, createUserDocFromAuth, getTeamFromDb } from '../utils/firebase/firebase.utils';
+import { onAuthStateChangedListener, createUserDocFromAuth, getTeamFromDb, setTeamOnDb } from '../utils/firebase/firebase.utils';
 
 export const UserContext = createContext({
     currentUser: null,
@@ -24,13 +24,17 @@ export const UserProvider = ({children}) => {
                     getTeamFromDb(userDocRef).then(team => setTeam(team));
                 });
             }
-
             if(!user) setTeam(null);
         });
         
         return unsubscribe;
     }, []);
 
+    useEffect(()=>{
+        if(currentUser) {
+            setTeamOnDb(currentUser, team);
+        }
+    }, [team])
 
     return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

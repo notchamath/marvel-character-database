@@ -35,14 +35,11 @@
     font-weight: bold;
 }
 
-.IdCard__add-btn{
-    z-index: 2;
-    position: absolute;
-    left: -15px;
-    top: -15px;
-    transition: all 2s ease-in-out;
+@mixin defaultStyles{
+
+    cursor: pointer;
     
-    .IdCard__add-btn-add{
+    .idBtn__add-btn-add{
         @include symbolStyles();
 
         &::before{
@@ -50,7 +47,7 @@
         }
     }
 
-    .IdCard__add-btn-check{
+    .idBtn__add-btn-check{
         @include symbolStyles();
 
         &::before{
@@ -58,23 +55,33 @@
         }
     }
     
-    .IdCard__add-btn_tooltip-add{
+    .idBtn__add-btn_tooltip-add{
         @include tooltipStyles();
         color: $gold;
     }
     
-    .IdCard__add-btn_tooltip-check{
+    .idBtn__add-btn_tooltip-check{
         @include tooltipStyles();
         color: rgb(127, 230, 127);;
     }
     
     &:hover{
-        .IdCard__add-btn_tooltip-add{
+        .idBtn__add-btn_tooltip-add{
             display: inline;
         }
 
-        .IdCard__add-btn_tooltip-check{
+        .idBtn__add-btn_tooltip-check{
             display: inline;
         }
     }
+}
+
+.idBtn__add-btn{
+    
+    z-index: 2;
+    position: absolute;
+    left: -15px;
+    top: -15px;    
+    
+    @include defaultStyles();
 }

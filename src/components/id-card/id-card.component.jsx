@@ -15,9 +15,9 @@ export const IdCard = forwardRef(({element}, ref) => {
     let url = useGetImage(element.thumbnail.path, element.thumbnail.extension);
 
     return(
-        <div className="IdCard-container" ref={ref} >
+        <div className="IdCard__container" ref={ref} >
 
-            <div className="IdCard-details" onClick={onNavigateHandler}>
+            <div className="IdCard__details" onClick={onNavigateHandler}>
                 <img src={url} alt={element.name} />
                 
                 <div className="IdCard__name">

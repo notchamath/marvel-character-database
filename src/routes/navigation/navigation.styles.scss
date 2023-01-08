@@ -13,6 +13,9 @@
 
     background: $grey-dark-gradient;
 
+    .logo-container{
+        cursor: pointer;
+    }
 
     .sign-up-btn{
         color: $primary-color;
