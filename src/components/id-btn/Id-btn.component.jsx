@@ -30,14 +30,14 @@ export default function IdBtn({element}) {
             </div>
         }
         {
-            currentUser && team.find(member => member.id === element.id) &&
+            currentUser && team && team.find(member => member.id === element.id) &&
             <div className='idBtn__add-btn' onClick={removeFromTeam}>
                 <span className="material-symbols-outlined idBtn__add-btn-check">check_circle</span>
                 <span className="idBtn__add-btn_tooltip-check">Remove</span>
             </div>
         }
         {   
-            currentUser && !team.find(member => member.id === element.id) &&
+            currentUser && team && !team.find(member => member.id === element.id) &&
             <div className='idBtn__add-btn' onClick={addToTeam}>
                 <span className="material-symbols-outlined idBtn__add-btn-add">add_circle</span>
                 <span className="idBtn__add-btn_tooltip-add">Add to team</span>
