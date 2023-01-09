@@ -25,7 +25,7 @@ export const Navigation = () => {
     }
 
     return (
-        <>
+        <div className="app-container">
             <nav className="navigation__nav">
                 <div className="logo-container" onClick={handleLogoClick}>
                     <Logo/>
@@ -52,6 +52,6 @@ export const Navigation = () => {
             <Outlet></Outlet>
 
             <Footer/>
-        </>
+        </div>
     )
 }

@@ -8,12 +8,13 @@
     margin-top: 2.5rem;
     border-radius: .5rem;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    height: 300px;
     
     .IdCard__details{
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 300px;
+        height: 100%;
 
         img{
             z-index: -1;
@@ -49,10 +50,7 @@
 
 @media screen and (max-width: 500px) {
     .IdCard__container{
-        width: 180px;
-
-        .IdCard__details{
-            height: 220px;
-        }
+        width: 220px;
+        height: 220px;
     }
 }
