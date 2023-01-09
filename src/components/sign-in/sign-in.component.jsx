@@ -39,10 +39,10 @@ const SignIn = () => {
 
       switch (error.code) {
         case 'auth/wrong-password':
-          alert('incorrect password or email');
+          alert('Incorrect Password or Email');
           break;
         case 'auth/user-not-found':
-          alert('no user associated with this email');
+          alert('No User Associated With This Email');
           break;
         default:
           console.log(error);
@@ -58,9 +58,16 @@ const SignIn = () => {
   };
 
   return (
-    <div className='signup__container'>
-      <h2>Already have an account?</h2>
-      <span>Sign in with your email and password</span>
+    <div className='signin__container'>
+      <h2>Sign In to Manage Your Team</h2>
+      <span>Sign In with your Email and Password or Use a Gmail Account</span>
+
+      <div className='signin__btns-container'>
+        <button className='signin__btns google-signin' type='button' onClick={signInWithGoogle}>
+          Google Sign In
+        </button>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <FormInput
           label='Email'
@@ -79,11 +86,8 @@ const SignIn = () => {
           name='password'
           value={password}
         />
-        <div className='signup__btns-container'>
-          <button type='submit'>Sign In</button>
-          <button type='button' onClick={signInWithGoogle}>
-            Google sign in
-          </button>
+        <div className='signin__btns-container'>
+          <button className='signin__btns' type='submit'>Sign In</button>
         </div>
       </form>
     </div>

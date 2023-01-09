@@ -37,6 +37,16 @@
             }
 
         }
+
+        .my-team{
+            color: $accent-color;
+            border: 3px solid $accent-color;
+
+            &:hover{
+                color: $primary-color;
+                background-color: $accent-color;
+            }
+        }
     }
 
 }

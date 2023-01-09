@@ -38,6 +38,10 @@ export default function SignUp() {
     } catch (e) {
       if (e.code === 'auth/email-already-in-use'){
         alert('Error: Email already in use');
+
+      } else if (e.code === 'auth/weak-password'){
+        alert('Error:  Password should be at least 6 characters');
+
       } else {
         console.log('User creation error::', e);
       }
@@ -52,8 +56,7 @@ export default function SignUp() {
 
   return(
     <div className='signup__container'>
-      <h2>Don't have an account?</h2>
-      <span>Sign up here</span>
+      <h2>Don't Have an Account? Sign Up to Create Your Own Team</h2>
       <form onSubmit={handleSubmit}>
         <FormInput
           label='Display Name'
@@ -91,7 +94,7 @@ export default function SignUp() {
           value={confirmPassword} 
         />
 
-        <button type="submit">Sign Up</button>
+        <button className="signup__btns" type="submit">Sign Up</button>
       </form>
     </div>
   ) 

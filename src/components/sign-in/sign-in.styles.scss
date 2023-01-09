@@ -1,0 +1,28 @@
+@import '../../config';
+
+.signin__container{
+    width: 300px;
+    .signin__btns-container{
+        margin: 1rem 0;
+
+        .signin__btns{
+            padding: .5rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            color: $primary-color;
+            background-color: $accent-color;
+            border: none;
+
+            &:active{
+                transform: translate(-2px, -2px);
+            }
+        }
+
+        .google-signin{
+            background-color: #4285F4;
+            margin-bottom: 1rem;
+
+        }
+    }
+}
