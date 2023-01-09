@@ -12,3 +12,18 @@
         grid-column-end: 4;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .my-team__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        column-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .my-team__container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

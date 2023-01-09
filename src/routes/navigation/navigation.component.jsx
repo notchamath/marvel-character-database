@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { UserContext } from '../../contexts/user.context';
 import { Searchbar } from "../../components/searchbar/searchbar.component";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import Footer from "../../components/footer/footer.component";
+
 import Logo from "../../components/logo/logo.component"; 
 
 import './navigation.styles.scss';
@@ -48,6 +50,8 @@ export const Navigation = () => {
             <aside className="navigation__aside">Data provided by Marvel. © 2014 Marvel</aside>
 
             <Outlet></Outlet>
+
+            <Footer/>
         </>
     )
 }

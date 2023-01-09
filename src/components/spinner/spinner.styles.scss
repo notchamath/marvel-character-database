@@ -30,4 +30,9 @@
   }
 }
 
-
+@media screen and (max-width: 800px) {
+  .spinner-overlay{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}

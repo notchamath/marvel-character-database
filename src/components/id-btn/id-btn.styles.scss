@@ -85,3 +85,17 @@
     
     @include defaultStyles();
 }
+
+@media screen and (max-width: 800px) {
+
+    .idBtn__add-btn{
+    
+        .idBtn__add-btn_tooltip-add{
+            display: inline;
+        }
+
+        .idBtn__add-btn_tooltip-check{
+            display: inline;
+        }
+    }
+}

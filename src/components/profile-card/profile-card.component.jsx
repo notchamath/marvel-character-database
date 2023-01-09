@@ -21,7 +21,7 @@ const ProfileCard = ({profileInfo}) => {
 
             <Tabs comics={profileInfo.comics} series={profileInfo.series} stories={profileInfo.stories}/>
             
-            <a target="_blank" href={profileInfo.urls[0].url}>More Info at Marvel</a>
+            <a target="_blank" rel="noreferrer" href={profileInfo.urls[0].url}>More Info at Marvel</a>
         </div>
     )
 }

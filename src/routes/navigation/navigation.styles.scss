@@ -62,4 +62,65 @@
     letter-spacing: 3px;
     color: $primary-color;
     background: $accent-color;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1200px) {
+    .navigation__aside{
+      font-size: 15px;
+      letter-spacing: 3px;
+      left: 0;
+      transform: rotate(-90deg) translateY(-580%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navigation__aside{
+        font-size: 10px;
+        letter-spacing: 1px;
+        left: 0;
+        transform: rotate(-90deg) translateY(-440%);
+    }
+
+    .navigation__nav{
+
+        display: flex;
+        justify-content: space-around;
+    
+        .navigation__buttons{
+    
+            .navigation__btn{
+                margin: 0;
+            }
+    
+            .my-team{
+                color: $accent-color;
+                border: 3px solid $accent-color;
+                margin-right: 1rem;
+    
+                &:hover{
+                    color: $primary-color;
+                    background-color: $accent-color;
+                }
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .navigation__nav{
+
+        display: flex;
+        justify-content: space-around;
+    
+        .navigation__buttons{
+    
+            .navigation__btn{
+                font-size: .8rem;
+                border: 2px solid;
+            }
+        }
+    }
 }

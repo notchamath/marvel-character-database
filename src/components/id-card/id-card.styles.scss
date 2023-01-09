@@ -40,3 +40,19 @@
         transition: all .2s ease-in-out;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .IdCard__container{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .IdCard__container{
+        width: 180px;
+
+        .IdCard__details{
+            height: 220px;
+        }
+    }
+}
