@@ -3,7 +3,10 @@
 .signin__container{
     width: 300px;
     .signin__btns-container{
+        display: flex;
+        justify-content: space-around;
         margin: 1rem 0;
+        
 
         .signin__btns{
             padding: .5rem;
@@ -23,6 +26,11 @@
             background-color: #4285F4;
             margin-bottom: 1rem;
 
+        }
+
+        .github-signin{
+            background-color: #333;
+            margin-bottom: 1rem;
         }
     }
 }

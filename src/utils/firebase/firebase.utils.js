@@ -24,19 +24,31 @@ const firebaseConfig = {
     storageBucket: "marvel-character-db-5df19.appspot.com",
     messagingSenderId: "129683183916",
     appId: "1:129683183916:web:77a836cc46340074907489"
-  };
+};
   
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
+// google sign in
 const providerGoogle = new GoogleAuthProvider();
 providerGoogle.setCustomParameters({
     prompt: 'select_account'
 });
 
+// github sign in
+const providerGithub = new GithubAuthProvider();
+
+// auth singleton
 export const auth = getAuth();
+
+// google popup for authentication
 export const signInWithGooglePopup = () => signInWithPopup(auth, providerGoogle);
 
+// github popup for authentication
+export const signInWithGithubPopup = () => signInWithPopup(auth, providerGithub);
+
+
+// database singleton
 export const db = getFirestore();
 
 // create user doc in db if not already there and return user ref

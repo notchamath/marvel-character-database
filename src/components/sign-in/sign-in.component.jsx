@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import {
   signInWithGooglePopup,
+  signInWithGithubPopup,
   signInAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
 
@@ -25,6 +26,10 @@ const SignIn = () => {
 
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
+  };
+
+  const signInWithGithub = async () => {
+    await signInWithGithubPopup();
   };
 
   const handleSubmit = async (event) => {
@@ -60,12 +65,18 @@ const SignIn = () => {
   return (
     <div className='signin__container'>
       <h2>Sign In to Manage Your Team</h2>
-      <span>Sign In with your Email and Password or Use a Gmail Account</span>
+      <span>Sign In with your Email and Password or Use a Gmail or Github Account</span>
 
       <div className='signin__btns-container'>
+
         <button className='signin__btns google-signin' type='button' onClick={signInWithGoogle}>
           Google Sign In
         </button>
+
+        <button className='signin__btns github-signin' type='button' onClick={signInWithGithub}>
+          Github Sign In
+        </button>
+
       </div>
 
       <form onSubmit={handleSubmit}>
