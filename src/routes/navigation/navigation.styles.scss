@@ -85,7 +85,7 @@
 @media screen and (max-width: 800px) {
     .app-container{
         .navigation__aside{
-            font-size: 10px;
+            font-size: 9px;
             letter-spacing: 1px;
             left: 0;
             transform: rotate(-90deg) translate(-5%, -420%);
@@ -134,6 +134,12 @@
                 }
             }
         }
+
+        .navigation__aside{
+            padding: .2rem 2rem;
+            transform: rotate(-90deg) translate(-5%, -680%);
+        }
+
     }
 }
 

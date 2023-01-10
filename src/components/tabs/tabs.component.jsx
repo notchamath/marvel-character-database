@@ -30,20 +30,20 @@ export default function Tabs({comics, series, stories}) {
             <div className="tabs__content">
 
                 <div className={toggleState === 1 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
-                    {comics.available > 0 && comics.items.map((comic, index) => {
-                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
+                    {comics.available > 0 && comics.items.map((element, index) => {
+                        return <div className='tabs__element' key={index + element.name}>{element.name}</div>
                     })}
                 </div>
 
                 <div className={toggleState === 2 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
-                    {comics.available > 0 && series.items.map((comic, index) => {
-                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
+                    {series.available > 0 && series.items.map((element, index) => {
+                        return <div className='tabs__element' key={index + element.name}>{element.name}</div>
                     })}
                 </div>
 
                 <div className={toggleState === 3 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
-                    {comics.available > 0 && stories.items.map((comic, index) => {
-                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
+                    {stories.available > 0 && stories.items.map((element, index) => {
+                        return <div className='tabs__element' key={index + element.name}>{element.name}</div>
                     })}
                 </div>
             </div>
