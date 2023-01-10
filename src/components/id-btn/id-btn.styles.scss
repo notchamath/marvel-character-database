@@ -1,100 +1,61 @@
 @import '../../config';
 
-@mixin symbolStyles{
-    font-size: 3rem;
-    color: $grey-dark-gradient;
-    
-    &::before{
-        content: '';
-        width: 60%;
-        height: 60%;
-        z-index: -1;
-        position: absolute;
-        border-radius: 50%;
-        top: 8px;
-        right: 8px;
-    }
-}
-
-@mixin tooltipStyles{
-    display: none;
-    position: absolute;
+.idBtn__add-btn{
+    display: flex;
+    align-items: center;
     background: $grey-dark-gradient;
-    width: 240%;
-    padding: 10px;
-    padding-left: 25px;
-    text-align: center;
-    border-radius: 10px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-5%, -56%);
-    z-index: -3;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-@mixin defaultStyles{
-
-    cursor: pointer;
+    padding: .3rem;
+    border-radius: 50%;
     
     .idBtn__add-btn-add{
-        @include symbolStyles();
-
-        &::before{
-            background: $gold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:  #fb3958;
+        
+        .material-symbols-outlined {
+            font-size: 30px;
         }
-    }
-
-    .idBtn__add-btn-check{
-        @include symbolStyles();
-
-        &::before{
-            background: rgb(127, 230, 127);
+        
+        .idBtn__liked {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
         }
+        
     }
     
-    .idBtn__add-btn_tooltip-add{
-        @include tooltipStyles();
-        color: $gold;
-    }
-    
-    .idBtn__add-btn_tooltip-check{
-        @include tooltipStyles();
-        color: rgb(127, 230, 127);;
+    .idBtn__add-btn_tooltip{
+        display: none;
+        padding: 0 8px;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $primary-color;
+        transition: all .8s ease-in-out;
     }
     
     &:hover{
-        .idBtn__add-btn_tooltip-add{
-            display: inline;
-        }
-
-        .idBtn__add-btn_tooltip-check{
-            display: inline;
-        }
-    }
-}
-
-.idBtn__add-btn{
-    
-    z-index: 2;
-    position: absolute;
-    left: -15px;
-    top: -15px;    
-    
-    @include defaultStyles();
-}
-
-@media screen and (max-width: 800px) {
-
-    .idBtn__add-btn{
-    
-        .idBtn__add-btn_tooltip-add{
+        justify-content: start;
+        border-radius: 15px;
+        
+        .idBtn__add-btn_tooltip{
             display: block;
         }
+    }
 
-        .idBtn__add-btn_tooltip-check{
+
+}
+
+@media screen and (max-width: 1000px) {
+    .idBtn__add-btn{
+      
+        justify-content: start;
+        border-radius: 15px;
+        
+        .idBtn__add-btn_tooltip{
             display: block;
         }
     }

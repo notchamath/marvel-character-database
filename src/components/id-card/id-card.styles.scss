@@ -9,6 +9,12 @@
     border-radius: .5rem;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     height: 300px;
+
+    .IdCard__btn{
+        position: absolute;
+        top: -20px;
+        left: -15px;
+    }
     
     .IdCard__details{
         display: flex;

@@ -1,11 +1,11 @@
-import { useContext} from 'react';
+import {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import { UserContext } from '../../contexts/user.context';
 
 import './id-btn.styles.scss';
 
-export default function IdBtn({element}) {
+export default function IdBtn({className, element}) {
     const {currentUser, team, setTeam} = useContext(UserContext);
     const navigate = useNavigate();
 
@@ -18,30 +18,47 @@ export default function IdBtn({element}) {
     };
     
     const goLogIn = () => navigate(`/auth`);
-    
+
+    const chooseButton = () => {
+
+        if(!currentUser){
+
+            return (
+                <div className={`idBtn__add-btn ${className}`} onClick={goLogIn}>
+                    <span className="idBtn__add-btn-add">
+                        <span className='material-symbols-outlined'>favorite</span>
+                    </span>
+                    <span className="idBtn__add-btn_tooltip">Favorite</span>
+                </div>
+            );
+
+        } else if (currentUser && team && team.find(member => member.id === element.id)){
+            return (
+                <div className={`idBtn__add-btn ${className}`} onClick={removeFromTeam}>
+                    <span className="idBtn__add-btn-add">
+                        <span className='material-symbols-outlined idBtn__liked'>favorite</span>
+                    </span>
+                    <span className="idBtn__add-btn_tooltip">Remove</span>
+                </div>
+            );
+
+        } else {
+
+            return (
+                <div className={`idBtn__add-btn ${className}`} onClick={addToTeam}>
+                    <span className="idBtn__add-btn-add">
+                        <span className='material-symbols-outlined'>favorite</span>
+                    </span>
+                    <span className="idBtn__add-btn_tooltip">Favorite</span>
+                </div>
+            );
+        }
+    }
 
     return (
         <>
         {
-            !currentUser &&
-            <div className='idBtn__add-btn' onClick={goLogIn}>
-                <span className="material-symbols-outlined idBtn__add-btn-add">add_circle</span>
-                <span className="idBtn__add-btn_tooltip-add">Add to team</span>
-            </div>
-        }
-        {
-            currentUser && team && team.find(member => member.id === element.id) &&
-            <div className='idBtn__add-btn' onClick={removeFromTeam}>
-                <span className="material-symbols-outlined idBtn__add-btn-check">check_circle</span>
-                <span className="idBtn__add-btn_tooltip-check">Remove</span>
-            </div>
-        }
-        {   
-            currentUser && team && !team.find(member => member.id === element.id) &&
-            <div className='idBtn__add-btn' onClick={addToTeam}>
-                <span className="material-symbols-outlined idBtn__add-btn-add">add_circle</span>
-                <span className="idBtn__add-btn_tooltip-add">Add to team</span>
-            </div>
+            chooseButton()
         }
         </>
     )

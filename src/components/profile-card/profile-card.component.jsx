@@ -1,5 +1,4 @@
 import Tabs from '../tabs/tabs.component';
-
 import useGetImage from '../../custom-hooks/useGetImage';
 
 import './profile-card.styles.scss';
