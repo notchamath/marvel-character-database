@@ -14,7 +14,7 @@ export default function MyTeam() {
   return (
     <div className="my-team__container">
       {
-        team && team.length === 0 && <h2 className='home__no-items-found'>Add members to your team and they will show up here</h2>
+        team && team.length === 0 && <h2 className='home__no-items-found'>Hit the Like button to add members to your team</h2>
       }
       {
         team && team.length > 0 && team.map(member => <IdCard element={member} key={member.id}/>)

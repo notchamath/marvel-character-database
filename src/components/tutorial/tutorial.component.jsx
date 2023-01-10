@@ -22,7 +22,7 @@ export default function Tutorial({className}) {
                 Welcome to Marvel Characters Database. You can search for any Marvel Comic Book characters here. Click on their photo to see more details about them. 
                 <br/>
                 <br/>
-                If you are signed in, you can save your favorite characters to your profile and they will show up on your Favorites Page.
+                If you are signed in, you can save your favorite characters to your profile by hitting the Like button and they will show up on the My Team page.
                 <br/>
                 <br/>
                 See full documentation <a rel="noreferrer" target='_blank' href="https://github.com/notchamath/marvel-character-database#readme">Here</a>.

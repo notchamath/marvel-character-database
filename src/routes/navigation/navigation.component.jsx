@@ -37,7 +37,7 @@ export const Navigation = () => {
                     {
                         currentUser?
                         <div className="navigation__buttons">
-                            <Link to='/my-team' className="navigation__btn my-team">Favorites</Link>
+                            <Link to='/my-team' className="navigation__btn my-team">My Team</Link>
                             <div className="navigation__btn" onClick={signOutUser}>Sign Out</div>
                         </div>
                          :

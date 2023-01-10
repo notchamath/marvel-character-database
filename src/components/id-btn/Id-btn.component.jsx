@@ -28,7 +28,7 @@ export default function IdBtn({className, element}) {
                     <span className="idBtn__add-btn-add">
                         <span className='material-symbols-outlined'>favorite</span>
                     </span>
-                    <span className="idBtn__add-btn_tooltip">Favorite</span>
+                    <span className="idBtn__add-btn_tooltip">Like</span>
                 </div>
             );
 
@@ -38,7 +38,7 @@ export default function IdBtn({className, element}) {
                     <span className="idBtn__add-btn-add">
                         <span className='material-symbols-outlined idBtn__liked'>favorite</span>
                     </span>
-                    <span className="idBtn__add-btn_tooltip">Remove</span>
+                    <span className="idBtn__add-btn_tooltip">Liked</span>
                 </div>
             );
 
@@ -49,7 +49,7 @@ export default function IdBtn({className, element}) {
                     <span className="idBtn__add-btn-add">
                         <span className='material-symbols-outlined'>favorite</span>
                     </span>
-                    <span className="idBtn__add-btn_tooltip">Favorite</span>
+                    <span className="idBtn__add-btn_tooltip">Like</span>
                 </div>
             );
         }

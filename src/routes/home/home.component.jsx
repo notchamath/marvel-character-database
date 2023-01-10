@@ -30,7 +30,7 @@ const Home = () => {
     return (
  
         <div className="home__container">
-            {tutorialOpen && <Tutorial className="home__messages"/>}
+            {!isLoading && tutorialOpen && <Tutorial className="home__messages"/>}
 
             {searchResults.length > 0 && searchResults.map((element, idx) => {
                 if(searchResults.length === idx + 1){

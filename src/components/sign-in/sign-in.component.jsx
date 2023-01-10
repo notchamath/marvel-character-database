@@ -64,7 +64,7 @@ const SignIn = () => {
 
   return (
     <div className='signin__container'>
-      <h2>Sign In to Manage Your Team</h2>
+      <h2>Sign In</h2>
       <span>Sign In with your Email and Password or Use a Gmail or Github Account</span>
 
       <div className='signin__btns-container'>

@@ -56,7 +56,7 @@ export default function SignUp() {
 
   return(
     <div className='signup__container'>
-      <h2>Don't Have an Account? Sign Up to Create Your Own Team</h2>
+      <h2>Don't Have an Account? Sign Up Here</h2>
       <p>We will not send you any emails. Password must be at least 6 characters</p>
       <form onSubmit={handleSubmit}>
         <FormInput
