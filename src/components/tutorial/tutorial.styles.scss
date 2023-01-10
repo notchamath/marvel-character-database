@@ -1,0 +1,29 @@
+.tutorial__container{
+    display: none;
+    position: relative;
+    color: white;
+    background-color: #575656;
+    border-radius: 5px;
+
+    .material-symbols-outlined{
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        cursor: pointer;
+    }
+
+    .tutotial__message{
+        padding: 1.5rem;
+        text-align: start;
+
+        a{
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+    }
+}
+
+.tutorial__open{
+    display: block;
+}

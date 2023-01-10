@@ -1,8 +1,9 @@
-import { useContext, useRef, useCallback} from "react";
+import {useContext, useRef, useCallback} from "react";
 
 import {SearchResultsContext} from '../../contexts/search-results.context';
 import { IdCard } from "../../components/id-card/id-card.component";
 import { Spinner } from '../../components/spinner/spinner.component';
+import Tutorial from "../../components/tutorial/tutorial.component";
 
 
 import './home.styles.scss';
@@ -29,6 +30,7 @@ const Home = () => {
     return (
  
         <div className="home__container">
+            <Tutorial className="home__messages"/>
 
             {searchResults.length > 0 && searchResults.map((element, idx) => {
                 if(searchResults.length === idx + 1){
@@ -38,7 +40,7 @@ const Home = () => {
                 }
             })}
 
-            {!isLoading && searchResults.length < 1 && <h1 className="home__no-items-found">No Items Found... Try different variations of the name</h1>} 
+            {!isLoading && searchResults.length < 1 && <h1 className="home__messages">No Items Found... Try different variations of the name</h1>} 
 
             {isLoading && <Spinner/>}
         </div>
