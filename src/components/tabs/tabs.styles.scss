@@ -76,4 +76,29 @@
       
 // }
   
-  
+
+.tabs__container{
+    width: 300px;
+    
+    .tabs__titles{
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .active{
+        background-color: red;
+    }
+
+    .tabs__content{
+
+        .tabs__content-col{
+            display: none;
+        }
+
+        .content-display{
+            display: block;
+        }
+    }
+
+}

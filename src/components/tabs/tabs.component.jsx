@@ -4,50 +4,50 @@ import './tabs.styles.scss';
 export default function Tabs({comics, series, stories}) {
     const [toggleState, setToggleState] = useState(1);
 
-    const switchTab = (idx) => {
+    const toggleActive = (idx) => {
         setToggleState(idx);
     }
 
     return (
         <div className="tabs__container">
-            <div className="tabs__block-tabs">
-                <div className={toggleState === 1 ? 'tabs__tab active-tab' : 'tabs__tab'} onClick={() => switchTab(1)}>Comics</div>
-                <div className={toggleState === 2 ? 'tabs__tab active-tab' : 'tabs__tab'} onClick={() => switchTab(2)}>Series</div>
-                <div className={toggleState === 3 ? 'tabs__tab active-tab' : 'tabs__tab'} onClick={() => switchTab(3)}>Stories</div>
-            </div>
 
-            <div className="tabs__content-tabs">
-                
-                <div className={toggleState === 1 ? 'tabs__content active-content' : 'tabs__content'}>
+            <div className="tabs__titles">
+
+                <div className={toggleState === 1 ? 'tabs__title active' : 'tabs__title'} onClick={() => toggleActive(1)}>
+                    COMICS <span>{comics.available}</span>
+                </div>
+
+                <div className={toggleState === 2 ? 'tabs__title active' : 'tabs__title'} onClick={() => toggleActive(2)}>
+                    SERIES <span>{series.available}</span>
+                </div>
+
+                <div className={toggleState === 3 ? 'tabs__title active' : 'tabs__title'} onClick={() => toggleActive(3)}>
+                    STORIES <span>{stories.available}</span>
+                </div>
+
+            </div>
+            
+            <div className="tabs__content">
+
+                <div className={toggleState === 1 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
                     {comics.available > 0 && comics.items.map((comic, index) => {
                         return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
                     })}
-
-                    <div className="tabs__total">
-                        Total comics available: {comics.available}
-                    </div>
                 </div>
 
-                <div className={toggleState === 2 ? 'tabs__content active-content' : 'tabs__content'}>
-                    {series.available > 0 && series.items.map((series, index) => {
-                        return <div className='tabs__element' key={index + series.name}>{series.name}</div>
+                <div className={toggleState === 2 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
+                    {comics.available > 0 && series.items.map((comic, index) => {
+                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
                     })}
-
-                    <div className="tabs__total">
-                        Total series available: {series.available}
-                    </div>
                 </div>
 
-                <div className={toggleState === 3 ? 'tabs__content active-content' : 'tabs__content'}>
-                    {stories.available > 0 && stories.items.map((story, index) => {
-                        return <div className='tabs__element' key={index + story.name}>{story.name}</div>
+                <div className={toggleState === 3 ? 'tabs__content-col content-display' : 'tabs__content-col'}>
+                    {comics.available > 0 && stories.items.map((comic, index) => {
+                        return <div className='tabs__element' key={index + comic.name}>{comic.name}</div>
                     })}
-
-                    <div className="tabs__total">
-                        Total stories available: {stories.available}
-                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
