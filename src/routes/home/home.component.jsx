@@ -10,7 +10,7 @@ import './home.styles.scss';
 
 const Home = () => {
     
-    const {searchResults, isLoading, setOffset, hasMore} = useContext(SearchResultsContext);
+    const {searchResults, isLoading, setOffset, hasMore, tutorialOpen} = useContext(SearchResultsContext);
     const observer = useRef();
 
     const lastElementRef = useCallback(node => {
@@ -30,7 +30,7 @@ const Home = () => {
     return (
  
         <div className="home__container">
-            <Tutorial className="home__messages"/>
+            {tutorialOpen && <Tutorial className="home__messages"/>}
 
             {searchResults.length > 0 && searchResults.map((element, idx) => {
                 if(searchResults.length === idx + 1){

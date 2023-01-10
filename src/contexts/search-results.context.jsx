@@ -9,6 +9,8 @@ export const SearchResultsContext = createContext({
     setOffset: () => null,
     hasMore: true,
     setHasMore: () => null,
+    tutorialOpen: true,
+    setTutorialOpen: () => null,
 });
 
 export const SearchResultsProvider = ({children}) => {
@@ -17,8 +19,9 @@ export const SearchResultsProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [offset, setOffset] = useState(0);
     const [hasMore, setHasMore] = useState(true);
+    const [tutorialOpen, setTutorialOpen] = useState(true);
 
-    const value = {searchResults, setSearchResults, isLoading, setIsLoading, offset, setOffset, hasMore, setHasMore};
+    const value = {searchResults, setSearchResults, isLoading, setIsLoading, offset, setOffset, hasMore, setHasMore, tutorialOpen, setTutorialOpen};
 
     return <SearchResultsContext.Provider value={value}>{children}</SearchResultsContext.Provider>
 }
