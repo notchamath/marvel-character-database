@@ -4,8 +4,12 @@ import {useParams, useNavigate} from "react-router-dom";
 import ProfileCard from '../../components/profile-card/profile-card.component';
 import {Spinner} from '../../components/spinner/spinner.component';
 import {SearchResultsContext} from '../../contexts/search-results.context';
+import useScrollToTop from '../../custom-hooks/useScrollToTop';
+
 
 const Profile = () => {
+
+    useScrollToTop();
 
     const { id } = useParams();
    

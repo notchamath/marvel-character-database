@@ -14,6 +14,7 @@ export const Searchbar = () => {
         event.preventDefault();
         setQuery(event.target[0].value);
         navigate(`/`);
+        window.scrollTo(0, 0);
     }
 
     useLoadData(query);

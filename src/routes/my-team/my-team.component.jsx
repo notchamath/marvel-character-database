@@ -2,13 +2,15 @@ import {useContext} from 'react';
 
 import { UserContext } from '../../contexts/user.context';
 import { IdCard } from "../../components/id-card/id-card.component";
+import useScrollToTop from '../../custom-hooks/useScrollToTop';
 
 import './my-team.styles.scss';
 
 export default function MyTeam() {
 
   const {team} = useContext(UserContext);
-
+  useScrollToTop();
+  
   return (
     <div className="my-team__container">
       {
