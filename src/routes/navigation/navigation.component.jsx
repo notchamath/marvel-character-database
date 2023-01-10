@@ -48,7 +48,8 @@ export const Navigation = () => {
 
             </nav>
 
-            <aside className="navigation__aside">Data provided by Marvel. © 2014 Marvel</aside>
+            {location.pathname !== '/auth' && <aside className="navigation__aside">Data provided by Marvel. © 2014 Marvel</aside>
+            }
 
             <Outlet></Outlet>
 

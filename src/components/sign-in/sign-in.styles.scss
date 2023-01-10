@@ -2,6 +2,8 @@
 
 .signin__container{
     width: 300px;
+    padding: 1rem;
+
     .signin__btns-container{
         margin: 1rem 0;
         
@@ -30,5 +32,14 @@
             background-color: #333;
             margin-bottom: 1rem;
         }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .signin__container{
+        width: 280px;
+        border: 1px $accent-color solid;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
     }
 }
