@@ -57,7 +57,7 @@ Once you are signed-in, **Authentication** page will be unavailable to you and y
 
 ## Like Button
 
-Only can be used if you are signed-in. Clicking the **Like** button on top-left of any character card will **Like** the character. If the character is already **Liked** the button will show as such, and clicking the button now will remove the Like.
+Only can be used if you are signed-in. Clicking the **Like** button on top-left of any character card will **Like** the character. If the character is already **Liked**, the button will show as such, and clicking the button now will remove the Like.
 <img src="./src/assets/screenshots/like-dislike.png">
 
 <br>
