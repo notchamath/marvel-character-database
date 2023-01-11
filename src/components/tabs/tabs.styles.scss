@@ -24,15 +24,16 @@
         font-weight: bold;
         
         .tabs__title{
+            padding: .2rem .4rem;
             cursor: pointer;
             transition: all .3s ease-in-out;
 
             display: flex;
             justify-content: center;
+            gap: 3px;
             flex-wrap: wrap;
             
             span{
-                margin-left: 5px;
                 padding: 1px 5px;
                 background: $primary-color;
                 color: $accent-color;
@@ -43,7 +44,6 @@
         }
 
         .active{
-            padding: .2rem .4rem;
             border-radius: 50px;
             background-color: $primary-color;
             color: $accent-color;
@@ -58,7 +58,10 @@
             padding-bottom: 1rem;
 
             .tabs__element{
-                margin: 1.2rem;
+                padding: .3rem;
+                margin: 1rem;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+                box-shadow: 0 1px 1px 0 rgba( 31, 38, 135, 0.37 );
             }
         }
 
