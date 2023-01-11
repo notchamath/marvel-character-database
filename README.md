@@ -13,8 +13,6 @@ A `Fully Responsive` React App that fetches data from the **The Marvel Comics AP
 `React Functional Components` `Custom Hooks` `React Router` `React Context` `Sass` `Firebase` `GIT`
 
 <br>
-<br>
-<br>
 
 # Tutorial
 
@@ -26,9 +24,9 @@ When you first visit the website you will land on the home page. There will be a
 <br>
 
 ## Infinite Scroll
-<img src="./src/assets/screenshots/infinite-scroll.png">
 
 If you scroll all the way to the bottom of the home page, more results will appear. And you can keep scrolling until you have seen all the Marvel Characters!
+<img src="./src/assets/screenshots/infinite-scroll.png">
 
 <br>
 
