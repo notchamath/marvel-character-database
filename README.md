@@ -1,4 +1,4 @@
-# [Personal Website](https://cozy-frangipane-4683ec.netlify.app/)
+# [Marvel Character Database](https://cozy-frangipane-4683ec.netlify.app/)
 
 <img src="assets/screenshots/home-page.png">
 
