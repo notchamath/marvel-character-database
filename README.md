@@ -19,9 +19,9 @@ A `Fully Responsive` React App that fetches data from the **The Marvel Comics AP
 # Tutorial
 
 ## Home Page
-<img src="./src/assets/screenshots/welcome-msg.png">
 
 When you first visit the website you will land on the home page. There will be a small pop-up message briefly explaining the functions of the website.
+<img src="./src/assets/screenshots/welcome-msg.png">
 
 <br>
 
