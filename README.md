@@ -31,10 +31,44 @@ If you scroll all the way to the bottom of the home page, more results will appe
 <br>
 
 ## Search Function
-<img src="./src/assets/screenshots/search-function.png">
 
 You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also, searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury".
+<img src="./src/assets/screenshots/search-function.png">
 
+<br>
+
+## Character Information Page
+
+Clicking on any photo of a character will direct you to the profile page of that character, where you can find more information about them, including the number of Comics, Series, Stories they are involved in (20 of each will appear in the Character Information Page while you can click on the **More Info at Marvel** button to see the whole collection).
+<img src="./src/assets/screenshots/character-profile.png">
+
+<br>
+
+## Authentication Page
+
+If you are not signed-in, top-right corner of the Navbar will show the **Sign In** button, clicking it will take you to **Authentication** Page, where you can choose to sign-in or sign-up. All Authentication is handled through **Firebase Authentication** so we will not be storing your password. You can also use a **Gmail** or **Github** account to sign-in. Signing-in is essencial for us to save your **Liked** characters to your profile. 
+
+Once you are signed-in, **Authentication** page will be unavailable to you and you will be automatically redirected to the **Home** page. Also, the Navbar will no longer have the **Sign In** button and instead will have **My Team** and **Sign Out** buttons.
+<img src="./src/assets/screenshots/my-team.png">
+
+<br>
+
+## Like Button
+
+Only can be used if you are signed-in. Clicking the **Like** button on top-left of any character card will **Like** the character. If the character is already **Liked** the button will show as such, and clicking the button now will remove the Like.
+<img src="./src/assets/screenshots/like-dislike.png">
+
+<br>
+
+## My Team Page
+
+Only can visit if you are signed-in. Traverse to this page by clicking the **My Team** button on the Navbar. All the characters you have **Liked** will show up here. You can remove them by hitting the **Liked** button again.
+<img src="./src/assets/screenshots/my-team.png">
+
+
+
+
+<br>
 <br>
 <br>
 
