@@ -13,9 +13,9 @@ A `Fully Responsive` React App that fetches data from the **The Marvel Comics AP
 `React Functional Components` `Custom Hooks` `React Router` `React Context` `Sass` `Firebase` `GIT`
 
 
-
-
-
+<br>
+<br>
+<br>
 
 # Getting Started with Create React App
 
