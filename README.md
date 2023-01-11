@@ -12,6 +12,30 @@ A `Fully Responsive` React App that fetches data from the **The Marvel Comics AP
 ## Technologies Used
 `React Functional Components` `Custom Hooks` `React Router` `React Context` `Sass` `Firebase` `GIT`
 
+<br>
+<br>
+<br>
+
+# Tutorial
+
+## Home Page
+<img src="./src/assets/screenshots/welcome-msg.png">
+
+When you first visit the website you will land on the home page. There will be a small pop-up message briefly explaining the functions of the website.
+
+<br>
+
+## Infinite Scroll
+<img src="./src/assets/screenshots/infinite-scroll.png">
+
+If you scroll all the way to the bottom of the home page, more results will appear. And you can keep scrolling until you have seen all the Marvel Characters!
+
+<br>
+
+## Search Function
+<img src="./src/assets/screenshots/search-function.png">
+
+You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury".
 
 <br>
 <br>
