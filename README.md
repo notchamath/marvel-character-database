@@ -3,7 +3,7 @@
 <img src="assets/screenshots/home-page.png">
 
 ## The Idea
-A `Fully Responsive` React App that fetches data from the **The Marvel Comics API**, allowing users to search for or browse through all of Marvel Comic book characters. `Infinite Scroll` feature populates the homepage as a user scrolls down. `React Context` is used to let a user sign-in (via `Firebase Authentication`), allowing the user to save any characters to their profile by clicking the **Like** button (via `Firestore` database backend). Any **Liked** characters will show up on the user's **My Team** page, as long as the user is signed-in. If the user is not signed-in, the **My Team** page will automatically redirect to **Authentication** page because **My Team** is a protected route. `React Router` is used for all routing.
+A `Fully Responsive` React App that fetches data from the **The Marvel Comics API**, allowing users to search for or browse through all of Marvel Comic book characters. `Infinite Scroll` feature populates the homepage as a user scrolls down. `React Context` is used to let users sign-in. Once a user is signed-in, the user can save any characters to `Firestore` database backend by clicking the **Like** button. These **Liked** characters will show up on the user's **My Team** page, as long as the user is signed-in. If the user is not signed-in, the **My Team** page will automatically redirect to **Authentication** page because **My Team** is a protected route. `React Router` is used for all routing.
 
 
 ### [Visit the Live Site](https://cozy-frangipane-4683ec.netlify.app/) 👈
