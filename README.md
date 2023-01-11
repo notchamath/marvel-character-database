@@ -39,7 +39,6 @@ You can search for any Marvel Character by name. But the spelling has to be prec
 
 <br>
 <br>
-<br>
 
 # Getting Started with Create React App
 
