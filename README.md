@@ -1,9 +1,9 @@
 # [Marvel Character Database](https://cozy-frangipane-4683ec.netlify.app/)
 
-<img src="assets/screenshots/home-page.png">
+<img src="./src/assets/screenshots/home-page.png">
 
 ## The Idea
-A `Fully Responsive` React App that fetches data from the **The Marvel Comics API**, allowing users to search for or browse through all of Marvel Comic book characters. `Infinite Scroll` feature populates the homepage as a user scrolls down. `React Context` is used to let users sign-in. Once a user is signed-in, the user can save any characters to `Firestore` database backend by clicking the **Like** button. These **Liked** characters will show up on the user's **My Team** page, as long as the user is signed-in. If the user is not signed-in, the **My Team** page will automatically redirect to **Authentication** page because **My Team** is a protected route. `React Router` is used for all routing.
+A `Fully Responsive` React App that fetches data from the **The Marvel Comics API**, allowing users to search for or browse through all of Marvel Comic book characters. `Infinite Scroll` feature populates the homepage as a user scrolls down. `React Context` is used to let users sign-in. Once a user is signed-in, the user can save any characters to `Firestore` database backend by clicking the **Like** button. These **Liked** characters will show up on the user's **My Team** page. If the user is not signed-in, the **My Team** page will automatically redirect to **Authentication** page because **My Team** is a protected route (**Authentication** page becomes a protected route if the user is already signed-in). `React Router` is used for all routing. `Conditional Redndering` is used throughout the app.
 
 
 ### [Visit the Live Site](https://cozy-frangipane-4683ec.netlify.app/) 👈
@@ -12,7 +12,33 @@ A `Fully Responsive` React App that fetches data from the **The Marvel Comics AP
 ## Technologies Used
 `React Functional Components` `Custom Hooks` `React Router` `React Context` `Sass` `Firebase` `GIT`
 
+<br>
+<br>
+<br>
 
+# Tutorial
+
+## Home Page
+<img src="./src/assets/screenshots/welcome-msg.png">
+
+When you first visit the website you will land on the home page. There will be a small pop-up message briefly explaining the functions of the website.
+
+<br>
+
+## Infinite Scroll
+<img src="./src/assets/screenshots/infinite-scroll.png">
+
+If you scroll all the way to the bottom of the home page, more results will appear. And you can keep scrolling until you have seen all the Marvel Characters!
+
+<br>
+
+## Search Function
+<img src="./src/assets/screenshots/search-function.png">
+
+You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury".
+
+<br>
+<br>
 
 # Getting Started with Create React App
 
