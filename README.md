@@ -51,7 +51,7 @@ Clicking on any photo of a character will direct you to the profile page of that
 If you are not signed-in, top-right corner of the Navbar will show the **Sign In** button, clicking it will take you to **Authentication** Page, where you can choose to sign-in or sign-up. All Authentication is handled through **Firebase Authentication** so we will not be storing your password. You can also use a **Gmail** or **Github** account to sign-in. Signing-in is essencial for us to save your **Liked** characters to your profile. 
 
 Once you are signed-in, **Authentication** page will be unavailable to you and you will be automatically redirected to the **Home** page. Also, the Navbar will no longer have the **Sign In** button and instead will have **My Team** and **Sign Out** buttons.
-<img src="./src/assets/screenshots/my-team.png">
+<img src="./src/assets/screenshots/auth.png">
 
 <br>
 
