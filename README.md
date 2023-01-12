@@ -34,7 +34,7 @@ If you scroll all the way to the bottom of the home page, more results will appe
 
 ## Search Function
 
-You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also, searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury".
+You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also, searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury". Capitalization does not matter.
 <img src="./src/assets/screenshots/search-function.png">
 
 <br>
