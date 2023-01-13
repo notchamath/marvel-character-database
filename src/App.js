@@ -21,7 +21,7 @@ function App() {
         <Route index element={<Home/>} />
 
         {/* protected routes */}
-        <Route path='auth' element={!currentUser? <Auth/> : <Navigate to='/' />} />
+        <Route path='auth' element={!currentUser? <Auth/> : <Navigate to='/my-team' />} />
         <Route path='my-team' element={currentUser? <MyTeam/> : <Navigate to='/auth' /> } />
 
         {/* profile page route */}

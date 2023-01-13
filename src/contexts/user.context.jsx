@@ -28,6 +28,7 @@ export const UserProvider = ({children}) => {
                 // if there is a user, get their team from firestore and update context
                 createUserDocFromAuth(user).then(userDocRef => {
                     getTeamFromDb(userDocRef).then(team => setTeam(team));
+                    console.log('fire')
                 });
             }
             // if user signs out, reset the team in context
