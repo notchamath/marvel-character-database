@@ -16,7 +16,7 @@ export default function MyTeam() {
     <div className="my-team__container">
       {
         // no items found message
-        team && team.length === 0 && <h2 className='home__no-items-found'>Your Team has no members yet! Hit the Like button to add members to your team</h2>
+        team && team.length === 0 && <h2 className='home__no-items-found'>Your Team has no members yet! Hit the Like button on top-left of any character card to add them to your team!</h2>
       }
       {
         // id-card for each character
