@@ -34,7 +34,7 @@ If you scroll all the way to the bottom of the home page, more results will appe
 
 ## Search Function
 
-You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yeild no results, because Marvel uses the name "Iron Man". Also, searching by last name will yeild no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury". Capitalization does not matter.
+You can search for any Marvel Character by name. But the spelling has to be precise. Ex: "Ironman" will yield no results, because Marvel uses the name "Iron Man". Also, searching by last name will yield no results, make sure to start with the first part of the name. Ex: "Nick" instead of "Fury". Capitalization does not matter.
 <img src="./src/assets/screenshots/search-function.png">
 
 <br>
@@ -48,7 +48,7 @@ Clicking on any photo of a character will direct you to the profile page of that
 
 ## Authentication Page
 
-If you are not signed-in, top-right corner of the Navbar will show the **Sign In** button, clicking it will take you to **Authentication** Page, where you can choose to sign-in or sign-up. All Authentication is handled through **Firebase Authentication** so we will not be storing your password. You can also use a **Gmail** or **Github** account to sign-in. Signing-in is essencial for us to save your **Liked** characters to your profile. 
+If you are not signed-in, top-right corner of the Navbar will show the **Sign In** button, clicking it will take you to **Authentication** Page, where you can choose to sign-in or sign-up. All Authentication is handled through **Firebase Authentication** so we will not be storing your password. You can also use a **Gmail** or **Github** account to sign-in. Signing-in is essential for us to save your **Liked** characters to your profile. 
 
 Once you are signed-in, **Authentication** page will be unavailable to you and you will be automatically redirected to the **Home** page. Also, the Navbar will no longer have the **Sign In** button and instead will have **My Team** and **Sign Out** buttons.
 <img src="./src/assets/screenshots/auth.png">
