@@ -4,6 +4,7 @@ import useScrollToTop from '../../custom-hooks/useScrollToTop';
 
 import './auth.styles.scss';
 
+// sign in and sign up components will be at auth route
 export default function Auth() {
 
   useScrollToTop();

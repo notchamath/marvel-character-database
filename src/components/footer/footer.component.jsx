@@ -1,5 +1,6 @@
 import './footer.styles.scss';
 
+// footer component
 export default function Footer() {
   return (
     <div className="footer__container">

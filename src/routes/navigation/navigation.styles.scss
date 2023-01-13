@@ -81,7 +81,6 @@
         }
     }
 }
-
 @media screen and (max-width: 800px) {
     .app-container{
         .navigation__aside{
@@ -117,7 +116,6 @@
         }
     }
 }
-
 @media screen and (max-width: 500px) {
 
     .app-container{
@@ -142,7 +140,6 @@
 
     }
 }
-
 @media (orientation: landscape) and (max-width: 900px) {
     .app-container{
         .navigation__aside{
@@ -152,4 +149,4 @@
             transform: rotate(-90deg) translate(-5%, -400%);
         }
     }
-  }
+}

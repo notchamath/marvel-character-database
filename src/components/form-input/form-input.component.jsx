@@ -1,18 +1,18 @@
 import './form-input.styles.scss';
 
+// form-inputs component, receives data from sign-up and sign-in forms
 const FormInput = ({ label, ...otherProps }) => {
   return (
     <div className='group'>
+
       <input className='form-input' {...otherProps} />
+
       {label && (
-        <label
-          className={`${
-            otherProps.value.length ? 'shrink' : ''
-          } form-input-label`}
-        >
+        <label className={`${otherProps.value.length ? 'shrink' : ''} form-input-label`}>
           {label}
         </label>
       )}
+
     </div>
   );
 };

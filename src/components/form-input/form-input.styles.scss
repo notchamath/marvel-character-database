@@ -1,6 +1,7 @@
 $sub-color: grey;
 $main-color: black;
 
+// shrink the label when input is clicked on
 @mixin shrinkLabel {
   top: -14px;
   font-size: 12px;

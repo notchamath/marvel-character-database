@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './tabs.styles.scss';
 
+// tabs component will dispaly comics, series, stories sent from profile card
 export default function Tabs({comics, series, stories}) {
     const [toggleState, setToggleState] = useState(1);
 
+    // determine which tab the user clicked on and open the right tab and content accordingly, hide the rest
     const toggleActive = (idx) => {
         setToggleState(idx);
     }

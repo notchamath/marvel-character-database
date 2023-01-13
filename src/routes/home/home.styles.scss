@@ -16,6 +16,7 @@
     }
 }
 
+// media queries
 @media screen and (max-width: 1200px) {
     .home__container{
         grid-template-columns: repeat(2, 1fr);
@@ -28,7 +29,6 @@
         }
     }
 }
-
 @media screen and (max-width: 800px) {
     .home__container{
         grid-template-columns: 1fr;

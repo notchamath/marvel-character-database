@@ -5,6 +5,7 @@ import FormInput from "../form-input/form-input.component";
 
 import './sign-up.styles.scss';
 
+// default values for useState
 const defaultFormFields = {
   displayName: '',
   email: '',
@@ -17,10 +18,12 @@ export default function SignUp() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const {displayName, email, password, confirmPassword} = formFields;
 
+  // reset fields to empty
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   }
 
+  // handle form submits, prevent reloading the page first then check for errors, if no errors, connect to firebase. Then catch any errors from firebase.
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -48,6 +51,7 @@ export default function SignUp() {
     }
   }
 
+  // all fields changes are recorded to useState
   const handleChange = (event) => {
     const {name, value} = event.target;
 

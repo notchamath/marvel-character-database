@@ -5,13 +5,12 @@
     margin: 30px auto;
 }
 
-
+// media queries
 @media screen and (max-width: 1000px) {
     .auth__container{
         width: 80%;
     }
 }
-  
 @media screen and (max-width: 800px) {
     .auth__container{
         flex-direction: column;

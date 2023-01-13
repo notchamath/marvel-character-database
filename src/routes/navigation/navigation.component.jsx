@@ -10,12 +10,14 @@ import Logo from "../../components/logo/logo.component";
 
 import './navigation.styles.scss';
 
+// navbar component
 export const Navigation = () => {
 
     const {currentUser} = useContext(UserContext);
     const location = useLocation();
     const navigate = useNavigate();
 
+    // clicking Logo button takes user to homepage, if already on homepage, reload the page
     const handleLogoClick = () => {
         if(location.pathname === '/'){
             window.location.reload();

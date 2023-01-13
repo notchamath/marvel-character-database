@@ -15,14 +15,19 @@ function App() {
 
   return (
     <Routes>
+      
+      {/* home route */}
       <Route path='/' element={<Navigation/>}>
         <Route index element={<Home/>} />
 
+        {/* protected routes */}
         <Route path='auth' element={!currentUser? <Auth/> : <Navigate to='/' />} />
         <Route path='my-team' element={currentUser? <MyTeam/> : <Navigate to='/auth' /> } />
 
+        {/* profile page route */}
         <Route path=':id' element={<Profile/>} />
         
+        {/* catchall error404 */}
         <Route path='*' element={<NotFoundPage/>}/>
       </Route>
       

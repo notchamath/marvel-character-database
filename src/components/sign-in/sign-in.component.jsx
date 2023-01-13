@@ -10,28 +10,34 @@ import FormInput from '../form-input/form-input.component';
 
 import './sign-in.styles.scss';
 
+// default values for useState
 const defaultFormFields = {
   email: '',
   password: '',
 };
 
+// sign in component
 const SignIn = () => {
 
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+  // reset fields to empty
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
+  // sign in with google
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
   };
 
+  // sign in with github
   const signInWithGithub = async () => {
     await signInWithGithubPopup();
   };
 
+  // handle form submits, prevent reloading the page first then connect to firebase
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -56,6 +62,7 @@ const SignIn = () => {
     }
   };
 
+  // all fields changes are recorded to useState
   const handleChange = (event) => {
     const { name, value } = event.target;
 

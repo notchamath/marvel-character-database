@@ -6,11 +6,12 @@ import {Spinner} from '../../components/spinner/spinner.component';
 import {SearchResultsContext} from '../../contexts/search-results.context';
 import useScrollToTop from '../../custom-hooks/useScrollToTop';
 
-
+// profile page component
 const Profile = () => {
 
     useScrollToTop();
 
+    // get the id of the character from url params
     const { id } = useParams();
    
     const {isLoading, setIsLoading} = useContext(SearchResultsContext);
@@ -19,6 +20,7 @@ const Profile = () => {
     const navigate = useNavigate();
     const pageNotFound = () => navigate(`/not/found`);
 
+    // on mount, fetch data from Api based on the id of the character
     useEffect(() => {
 
         setIsLoading(true);

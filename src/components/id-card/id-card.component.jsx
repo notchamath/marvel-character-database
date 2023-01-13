@@ -7,11 +7,14 @@ import useGetImage from '../../custom-hooks/useGetImage';
 
 import './id-card.styles.scss';
 
+// info about character passed in, with a ref for last item (if called from home)
 export const IdCard = forwardRef(({element}, ref) => {
 
+    // clicking on id-card send user to profile page
     const navigate = useNavigate();
     const onNavigateHandler = () => navigate(`/${element.id}`);
 
+    // custom hook to set the url of each image
     let url = useGetImage(element.thumbnail.path, element.thumbnail.extension);
 
     return(

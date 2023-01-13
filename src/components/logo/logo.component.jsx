@@ -1,5 +1,6 @@
 import './logo.styles.scss';
 
+// logo component for navbar
 const Logo = () => {
 
     return(

@@ -4,10 +4,13 @@ import { SearchResultsContext } from '../../contexts/search-results.context';
 
 import './tutorial.styles.scss';
 
+// the welcome tutorial message to be displayed at homepage
+// receives a css class from home component
 export default function Tutorial({className}) {
 
     const {setTutorialOpen} = useContext(SearchResultsContext);
 
+    // lets the user close the message
     const closeTutorial = (e) => {
         e.target.parentNode.classList.toggle('tutorial__open');
         setTutorialOpen(false);
