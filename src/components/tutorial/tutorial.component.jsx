@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-
+import { AiOutlineClose } from "react-icons/ai";
 import { SearchResultsContext } from '../../contexts/search-results.context';
 
 import './tutorial.styles.scss';
@@ -18,8 +18,8 @@ export default function Tutorial({className}) {
 
     return (
         <div className={`tutorial__container tutorial__open ${className}`}>
-                <span className="material-symbols-outlined" onClick={closeTutorial}>
-                    close
+                <span className="tutorial__close-btn" onClick={closeTutorial}>
+                    <AiOutlineClose/>
                 </span>
             <div className='tutotial__message'>
                 Welcome to Marvel Characters Database. You can search for any Marvel Comic Book characters here. Click on their photo to see more details about them. 

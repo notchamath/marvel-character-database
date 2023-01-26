@@ -1,5 +1,6 @@
 import {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 import { UserContext } from '../../contexts/user.context';
 
@@ -36,7 +37,9 @@ export default function IdBtn({className, element}) {
             return (
                 <div className={`idBtn__add-btn ${className}`} onClick={goLogIn}>
                     <span className="idBtn__add-btn-add">
-                        <span className='material-symbols-outlined'>favorite</span>
+                        <span className='idBtn_icon'>
+                            <AiOutlineHeart/>
+                        </span>
                     </span>
                     <span className="idBtn__add-btn_tooltip">Like</span>
                 </div>
@@ -46,7 +49,9 @@ export default function IdBtn({className, element}) {
             return (
                 <div className={`idBtn__add-btn ${className}`} onClick={removeFromTeam}>
                     <span className="idBtn__add-btn-add">
-                        <span className='material-symbols-outlined idBtn__liked'>favorite</span>
+                        <span className='idBtn_icon'>
+                            <AiFillHeart/>
+                        </span>
                     </span>
                     <span className="idBtn__add-btn_tooltip">Liked</span>
                 </div>
@@ -57,7 +62,9 @@ export default function IdBtn({className, element}) {
             return (
                 <div className={`idBtn__add-btn ${className}`} onClick={addToTeam}>
                     <span className="idBtn__add-btn-add">
-                        <span className='material-symbols-outlined'>favorite</span>
+                        <span className='idBtn_icon'>
+                            <AiOutlineHeart/>
+                        </span>
                     </span>
                     <span className="idBtn__add-btn_tooltip">Like</span>
                 </div>
