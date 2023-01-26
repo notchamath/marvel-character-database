@@ -5,9 +5,13 @@
     padding: 1rem;
 
     .signin__btns-container{
+        display: flex;
         margin: 1rem 0;
         
         .signin__btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: .5rem;
             font-weight: bold;
             border-radius: 5px;
@@ -15,6 +19,11 @@
             color: $primary-color;
             background-color: $accent-color;
             border: none;
+
+            .signin__btns-icon{
+                font-size: 16px;
+                padding-right: 5px;
+            }
 
             &:active{
                 transform: translate(-2px, -2px);

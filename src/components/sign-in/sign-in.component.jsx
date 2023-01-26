@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 import {
   signInWithGooglePopup,
@@ -77,11 +78,11 @@ const SignIn = () => {
       <div className='signin__btns-container'>
 
         <button className='signin__btns google-signin' type='button' onClick={signInWithGoogle}>
-          Google Sign In
+          <span className='signin__btns-icon'><FaGoogle/></span> Google Sign In
         </button>
 
         <button className='signin__btns github-signin' type='button' onClick={signInWithGithub}>
-          Github Sign In
+          <span className='signin__btns-icon'><FaGithub/></span> Github Sign In
         </button>
 
       </div>
